@@ -65,14 +65,14 @@ ScreenGui.Parent = PlayerGui
 
 local Main = Instance.new("Frame")
 Main.Name = "Main"
-Main.Size = UDim2.fromOffset(360, 540)
+Main.Size = UDim2.fromOffset(300, 430) -- smaller default size
 Main.Position = UDim2.new(0.03, 0, 0.2, 0)
 Main.BackgroundColor3 = Color3.fromRGB(18, 18, 24)
 Main.BorderSizePixel = 0
 Main.Active = true
 Main.Parent = ScreenGui
 
-Instance.new("UICorner", Main).CornerRadius = UDim.new(0, 14)
+Instance.new("UICorner", Main).CornerRadius = UDim.new(0, 10)
 
 local Stroke = Instance.new("UIStroke")
 Stroke.Color = Color3.fromRGB(45, 45, 60)
@@ -81,85 +81,85 @@ Stroke.Parent = Main
 
 -- ========== TOP BAR ==========
 local TopBar = Instance.new("Frame")
-TopBar.Size = UDim2.new(1, 0, 0, 42)
+TopBar.Size = UDim2.new(1, 0, 0, 32)
 TopBar.BackgroundColor3 = Color3.fromRGB(26, 26, 34)
 TopBar.BorderSizePixel = 0
 TopBar.Parent = Main
 
-Instance.new("UICorner", TopBar).CornerRadius = UDim.new(0, 14)
+Instance.new("UICorner", TopBar).CornerRadius = UDim.new(0, 10)
 
 local TopBarFix = Instance.new("Frame")
-TopBarFix.Size = UDim2.new(1, 0, 0, 14)
-TopBarFix.Position = UDim2.new(0, 0, 1, -14)
+TopBarFix.Size = UDim2.new(1, 0, 0, 10)
+TopBarFix.Position = UDim2.new(0, 0, 1, -10)
 TopBarFix.BackgroundColor3 = Color3.fromRGB(26, 26, 34)
 TopBarFix.BorderSizePixel = 0
 TopBarFix.Parent = TopBar
 
 local Title = Instance.new("TextLabel")
-Title.Size = UDim2.new(1, -100, 1, 0)
-Title.Position = UDim2.fromOffset(14, 0)
+Title.Size = UDim2.new(1, -80, 1, 0)
+Title.Position = UDim2.fromOffset(10, 0)
 Title.BackgroundTransparency = 1
-Title.Text = "🎣 Auto Farm  •  Made by Mugi fucker"
+Title.Text = "🎣 Auto Farm • Mugi"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title.TextSize = 14
+Title.TextSize = 12
 Title.Font = Enum.Font.GothamBold
 Title.TextXAlignment = Enum.TextXAlignment.Left
 Title.Parent = TopBar
 
 local MinimizeBtn = Instance.new("TextButton")
-MinimizeBtn.Size = UDim2.fromOffset(28, 28)
-MinimizeBtn.Position = UDim2.new(1, -70, 0.5, -14)
+MinimizeBtn.Size = UDim2.fromOffset(22, 22)
+MinimizeBtn.Position = UDim2.new(1, -54, 0.5, -11)
 MinimizeBtn.BackgroundColor3 = Color3.fromRGB(255, 172, 92)
 MinimizeBtn.Text = "−"
 MinimizeBtn.TextColor3 = Color3.new(1, 1, 1)
-MinimizeBtn.TextSize = 20
+MinimizeBtn.TextSize = 16
 MinimizeBtn.Font = Enum.Font.GothamBold
 MinimizeBtn.Parent = TopBar
-Instance.new("UICorner", MinimizeBtn).CornerRadius = UDim.new(0, 7)
+Instance.new("UICorner", MinimizeBtn).CornerRadius = UDim.new(0, 5)
 
 local CloseBtn = Instance.new("TextButton")
-CloseBtn.Size = UDim2.fromOffset(28, 28)
-CloseBtn.Position = UDim2.new(1, -36, 0.5, -14)
+CloseBtn.Size = UDim2.fromOffset(22, 22)
+CloseBtn.Position = UDim2.new(1, -28, 0.5, -11)
 CloseBtn.BackgroundColor3 = Color3.fromRGB(220, 70, 70)
 CloseBtn.Text = "✕"
 CloseBtn.TextColor3 = Color3.new(1, 1, 1)
-CloseBtn.TextSize = 14
+CloseBtn.TextSize = 12
 CloseBtn.Font = Enum.Font.GothamBold
 CloseBtn.Parent = TopBar
-Instance.new("UICorner", CloseBtn).CornerRadius = UDim.new(0, 7)
+Instance.new("UICorner", CloseBtn).CornerRadius = UDim.new(0, 5)
 
 -- ========== TABS ==========
 local TabBar = Instance.new("Frame")
-TabBar.Size = UDim2.new(1, -24, 0, 36)
-TabBar.Position = UDim2.fromOffset(12, 50)
+TabBar.Size = UDim2.new(1, -16, 0, 28)
+TabBar.Position = UDim2.fromOffset(8, 38)
 TabBar.BackgroundTransparency = 1
 TabBar.Parent = Main
 
 local FishTabBtn = Instance.new("TextButton")
-FishTabBtn.Size = UDim2.new(0.5, -4, 1, 0)
+FishTabBtn.Size = UDim2.new(0.5, -3, 1, 0)
 FishTabBtn.BackgroundColor3 = Color3.fromRGB(46, 204, 113)
-FishTabBtn.Text = "🐟 Fish Killer"
+FishTabBtn.Text = "🐟 Fish"
 FishTabBtn.TextColor3 = Color3.new(1, 1, 1)
-FishTabBtn.TextSize = 13
+FishTabBtn.TextSize = 11
 FishTabBtn.Font = Enum.Font.GothamBold
 FishTabBtn.Parent = TabBar
-Instance.new("UICorner", FishTabBtn).CornerRadius = UDim.new(0, 8)
+Instance.new("UICorner", FishTabBtn).CornerRadius = UDim.new(0, 6)
 
 local ChestTabBtn = Instance.new("TextButton")
-ChestTabBtn.Size = UDim2.new(0.5, -4, 1, 0)
-ChestTabBtn.Position = UDim2.new(0.5, 4, 0, 0)
+ChestTabBtn.Size = UDim2.new(0.5, -3, 1, 0)
+ChestTabBtn.Position = UDim2.new(0.5, 3, 0, 0)
 ChestTabBtn.BackgroundColor3 = Color3.fromRGB(50, 50, 65)
-ChestTabBtn.Text = "📦 Chest Hunter"
+ChestTabBtn.Text = "📦 Chest"
 ChestTabBtn.TextColor3 = Color3.fromRGB(200, 200, 210)
-ChestTabBtn.TextSize = 13
+ChestTabBtn.TextSize = 11
 ChestTabBtn.Font = Enum.Font.GothamBold
 ChestTabBtn.Parent = TabBar
-Instance.new("UICorner", ChestTabBtn).CornerRadius = UDim.new(0, 8)
+Instance.new("UICorner", ChestTabBtn).CornerRadius = UDim.new(0, 6)
 
 -- ========== CONTENT CONTAINERS ==========
 local Content = Instance.new("Frame")
-Content.Size = UDim2.new(1, -24, 1, -100)
-Content.Position = UDim2.fromOffset(12, 94)
+Content.Size = UDim2.new(1, -16, 1, -76)
+Content.Position = UDim2.fromOffset(8, 70)
 Content.BackgroundTransparency = 1
 Content.Parent = Main
 
@@ -178,58 +178,58 @@ ChestContent.Parent = Content
 -- ====================== FISH KILLER UI ======================
 
 local KeyLabel = Instance.new("TextLabel")
-KeyLabel.Size = UDim2.new(1, 0, 0, 30)
+KeyLabel.Size = UDim2.new(1, 0, 0, 22)
 KeyLabel.BackgroundColor3 = Color3.fromRGB(32, 32, 42)
 KeyLabel.Text = "Key: None"
 KeyLabel.TextColor3 = Color3.fromRGB(100, 220, 140)
-KeyLabel.TextSize = 13
+KeyLabel.TextSize = 11
 KeyLabel.Font = Enum.Font.GothamMedium
 KeyLabel.Parent = FishContent
-Instance.new("UICorner", KeyLabel).CornerRadius = UDim.new(0, 8)
+Instance.new("UICorner", KeyLabel).CornerRadius = UDim.new(0, 6)
 
 local StatusLabel = Instance.new("TextLabel")
-StatusLabel.Size = UDim2.new(1, 0, 0, 18)
-StatusLabel.Position = UDim2.fromOffset(0, 36)
+StatusLabel.Size = UDim2.new(1, 0, 0, 14)
+StatusLabel.Position = UDim2.fromOffset(0, 26)
 StatusLabel.BackgroundTransparency = 1
 StatusLabel.Text = "Status: Idle"
 StatusLabel.TextColor3 = Color3.fromRGB(180, 180, 190)
-StatusLabel.TextSize = 12
+StatusLabel.TextSize = 10
 StatusLabel.Font = Enum.Font.Gotham
 StatusLabel.TextXAlignment = Enum.TextXAlignment.Left
 StatusLabel.Parent = FishContent
 
 local TimerLabel = Instance.new("TextLabel")
-TimerLabel.Size = UDim2.new(1, 0, 0, 18)
-TimerLabel.Position = UDim2.fromOffset(0, 54)
+TimerLabel.Size = UDim2.new(1, 0, 0, 14)
+TimerLabel.Position = UDim2.fromOffset(0, 40)
 TimerLabel.BackgroundTransparency = 1
 TimerLabel.Text = "Time: 00:00"
 TimerLabel.TextColor3 = Color3.fromRGB(255, 172, 92)
-TimerLabel.TextSize = 12
+TimerLabel.TextSize = 10
 TimerLabel.Font = Enum.Font.GothamBold
 TimerLabel.TextXAlignment = Enum.TextXAlignment.Left
 TimerLabel.Parent = FishContent
 
 local SettingsFrame = Instance.new("Frame")
-SettingsFrame.Size = UDim2.new(1, 0, 0, 210)
-SettingsFrame.Position = UDim2.fromOffset(0, 78)
+SettingsFrame.Size = UDim2.new(1, 0, 0, 175)
+SettingsFrame.Position = UDim2.fromOffset(0, 58)
 SettingsFrame.BackgroundColor3 = Color3.fromRGB(28, 28, 38)
 SettingsFrame.BorderSizePixel = 0
 SettingsFrame.Parent = FishContent
-Instance.new("UICorner", SettingsFrame).CornerRadius = UDim.new(0, 10)
+Instance.new("UICorner", SettingsFrame).CornerRadius = UDim.new(0, 8)
 
 local Scroll = Instance.new("ScrollingFrame")
-Scroll.Size = UDim2.new(1, -12, 1, -12)
-Scroll.Position = UDim2.fromOffset(6, 6)
+Scroll.Size = UDim2.new(1, -8, 1, -8)
+Scroll.Position = UDim2.fromOffset(4, 4)
 Scroll.BackgroundTransparency = 1
 Scroll.BorderSizePixel = 0
-Scroll.ScrollBarThickness = 3
+Scroll.ScrollBarThickness = 2
 Scroll.ScrollBarImageColor3 = Color3.fromRGB(80, 80, 100)
 Scroll.CanvasSize = UDim2.new(0, 0, 0, 0)
 Scroll.AutomaticCanvasSize = Enum.AutomaticSize.Y
 Scroll.Parent = SettingsFrame
 
 local Layout = Instance.new("UIListLayout")
-Layout.Padding = UDim.new(0, 5)
+Layout.Padding = UDim.new(0, 3)
 Layout.SortOrder = Enum.SortOrder.LayoutOrder
 Layout.Parent = Scroll
 
@@ -237,59 +237,58 @@ local settingRows = {}
 
 local function makeSettingRow(name, labelText, min, max, step, order, isWholeNumber)
     local Row = Instance.new("Frame")
-    Row.Size = UDim2.new(1, -4, 0, 30)
+    Row.Size = UDim2.new(1, -2, 0, 24)
     Row.BackgroundColor3 = Color3.fromRGB(38, 38, 50)
     Row.BorderSizePixel = 0
     Row.LayoutOrder = order
     Row.Parent = Scroll
-    Instance.new("UICorner", Row).CornerRadius = UDim.new(0, 7)
+    Instance.new("UICorner", Row).CornerRadius = UDim.new(0, 5)
 
     local Lbl = Instance.new("TextLabel")
-    Lbl.Size = UDim2.new(1, -130, 1, 0)
-    Lbl.Position = UDim2.fromOffset(10, 0)
+    Lbl.Size = UDim2.new(1, -110, 1, 0)
+    Lbl.Position = UDim2.fromOffset(6, 0)
     Lbl.BackgroundTransparency = 1
     Lbl.Text = labelText
     Lbl.TextColor3 = Color3.fromRGB(200, 200, 220)
-    Lbl.TextSize = 12
+    Lbl.TextSize = 10
     Lbl.Font = Enum.Font.Gotham
     Lbl.TextXAlignment = Enum.TextXAlignment.Left
     Lbl.Parent = Row
 
     local Minus = Instance.new("TextButton")
-    Minus.Size = UDim2.fromOffset(24, 24)
-    Minus.Position = UDim2.new(1, -115, 0.5, -12)
+    Minus.Size = UDim2.fromOffset(20, 20)
+    Minus.Position = UDim2.new(1, -98, 0.5, -10)
     Minus.BackgroundColor3 = Color3.fromRGB(60, 60, 80)
     Minus.Text = "−"
     Minus.TextColor3 = Color3.new(1, 1, 1)
-    Minus.TextSize = 16
+    Minus.TextSize = 14
     Minus.Font = Enum.Font.GothamBold
     Minus.Parent = Row
-    Instance.new("UICorner", Minus).CornerRadius = UDim.new(0, 6)
+    Instance.new("UICorner", Minus).CornerRadius = UDim.new(0, 4)
 
-    -- Typeable TextBox instead of TextLabel
     local Val = Instance.new("TextBox")
-    Val.Size = UDim2.fromOffset(55, 24)
-    Val.Position = UDim2.new(1, -88, 0.5, -12)
+    Val.Size = UDim2.fromOffset(48, 20)
+    Val.Position = UDim2.new(1, -75, 0.5, -10)
     Val.BackgroundColor3 = Color3.fromRGB(28, 28, 40)
     Val.Text = isWholeNumber and tostring(math.floor(SETTINGS[name])) or string.format("%.3f", SETTINGS[name])
     Val.TextColor3 = Color3.fromRGB(100, 220, 140)
-    Val.TextSize = 12
+    Val.TextSize = 10
     Val.Font = Enum.Font.GothamBold
     Val.TextXAlignment = Enum.TextXAlignment.Center
     Val.ClearTextOnFocus = false
     Val.Parent = Row
-    Instance.new("UICorner", Val).CornerRadius = UDim.new(0, 6)
+    Instance.new("UICorner", Val).CornerRadius = UDim.new(0, 4)
 
     local Plus = Instance.new("TextButton")
-    Plus.Size = UDim2.fromOffset(24, 24)
-    Plus.Position = UDim2.new(1, -28, 0.5, -12)
+    Plus.Size = UDim2.fromOffset(20, 20)
+    Plus.Position = UDim2.new(1, -24, 0.5, -10)
     Plus.BackgroundColor3 = Color3.fromRGB(60, 60, 80)
     Plus.Text = "+"
     Plus.TextColor3 = Color3.new(1, 1, 1)
-    Plus.TextSize = 16
+    Plus.TextSize = 14
     Plus.Font = Enum.Font.GothamBold
     Plus.Parent = Row
-    Instance.new("UICorner", Plus).CornerRadius = UDim.new(0, 6)
+    Instance.new("UICorner", Plus).CornerRadius = UDim.new(0, 4)
 
     local function refresh()
         Val.Text = isWholeNumber and tostring(math.floor(SETTINGS[name])) or string.format("%.3f", SETTINGS[name])
@@ -299,20 +298,15 @@ local function makeSettingRow(name, labelText, min, max, step, order, isWholeNum
     local function applyValue(text)
         local num = tonumber(text)
         if not num then
-            refresh() -- invalid input → reset to current value
+            refresh()
             return
         end
-
-        if isWholeNumber then
-            num = math.floor(num)
-        end
-
+        if isWholeNumber then num = math.floor(num) end
         SETTINGS[name] = math.clamp(num, min, max)
         refresh()
     end
 
-    -- When user finishes typing
-    Val.FocusLost:Connect(function(enterPressed)
+    Val.FocusLost:Connect(function()
         applyValue(Val.Text)
     end)
 
@@ -338,40 +332,79 @@ makeSettingRow("ClickDelay", "Click Delay", 0, 0.5, 0.001, 6)
 makeSettingRow("ScanInterval", "Scan Interval", 0, 0.5, 0.005, 7)
 
 local FishToggle = Instance.new("TextButton")
-FishToggle.Size = UDim2.new(1, 0, 0, 44)
-FishToggle.Position = UDim2.fromOffset(0, 300)
+FishToggle.Size = UDim2.new(1, 0, 0, 34)
+FishToggle.Position = UDim2.fromOffset(0, 242)
 FishToggle.BackgroundColor3 = Color3.fromRGB(46, 204, 113)
 FishToggle.Text = "START FISHING"
 FishToggle.TextColor3 = Color3.new(1, 1, 1)
-FishToggle.TextSize = 15
+FishToggle.TextSize = 13
 FishToggle.Font = Enum.Font.GothamBold
 FishToggle.Parent = FishContent
-Instance.new("UICorner", FishToggle).CornerRadius = UDim.new(0, 10)
+Instance.new("UICorner", FishToggle).CornerRadius = UDim.new(0, 7)
 
 local ResetBtn = Instance.new("TextButton")
-ResetBtn.Size = UDim2.new(1, 0, 0, 32)
-ResetBtn.Position = UDim2.fromOffset(0, 352)
+ResetBtn.Size = UDim2.new(1, 0, 0, 26)
+ResetBtn.Position = UDim2.fromOffset(0, 282)
 ResetBtn.BackgroundColor3 = Color3.fromRGB(55, 55, 70)
 ResetBtn.Text = "Reset to Defaults"
 ResetBtn.TextColor3 = Color3.new(1, 1, 1)
-ResetBtn.TextSize = 12
+ResetBtn.TextSize = 11
 ResetBtn.Font = Enum.Font.GothamBold
 ResetBtn.Parent = FishContent
-Instance.new("UICorner", ResetBtn).CornerRadius = UDim.new(0, 8)
+Instance.new("UICorner", ResetBtn).CornerRadius = UDim.new(0, 6)
 
--- ====================== CHEST HUNTER UI (ONLY MESSAGE) ======================
+-- ====================== CHEST HUNTER UI ======================
 
 local ChestMessage = Instance.new("TextLabel")
-ChestMessage.Size = UDim2.new(1, 0, 0, 80)
-ChestMessage.Position = UDim2.fromOffset(0, 40)
+ChestMessage.Size = UDim2.new(1, 0, 0, 60)
+ChestMessage.Position = UDim2.fromOffset(0, 30)
 ChestMessage.BackgroundColor3 = Color3.fromRGB(32, 32, 42)
 ChestMessage.Text = "Robux first then the script"
 ChestMessage.TextColor3 = Color3.fromRGB(255, 172, 92)
-ChestMessage.TextSize = 16
+ChestMessage.TextSize = 13
 ChestMessage.Font = Enum.Font.GothamBold
 ChestMessage.TextWrapped = true
 ChestMessage.Parent = ChestContent
-Instance.new("UICorner", ChestMessage).CornerRadius = UDim.new(0, 10)
+Instance.new("UICorner", ChestMessage).CornerRadius = UDim.new(0, 8)
+
+-- ====================== RESIZE HANDLE ======================
+
+local ResizeHandle = Instance.new("TextButton")
+ResizeHandle.Size = UDim2.fromOffset(16, 16)
+ResizeHandle.Position = UDim2.new(1, -16, 1, -16)
+ResizeHandle.BackgroundColor3 = Color3.fromRGB(60, 60, 80)
+ResizeHandle.Text = "⌟"
+ResizeHandle.TextColor3 = Color3.fromRGB(180, 180, 200)
+ResizeHandle.TextSize = 12
+ResizeHandle.Font = Enum.Font.GothamBold
+ResizeHandle.Parent = Main
+Instance.new("UICorner", ResizeHandle).CornerRadius = UDim.new(0, 4)
+
+local resizing = false
+local resizeStart, startSize
+
+ResizeHandle.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        resizing = true
+        resizeStart = input.Position
+        startSize = Main.Size
+    end
+end)
+
+UserInputService.InputEnded:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+        resizing = false
+    end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+    if resizing and (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+        local delta = input.Position - resizeStart
+        local newX = math.clamp(startSize.X.Offset + delta.X, 260, 500)
+        local newY = math.clamp(startSize.Y.Offset + delta.Y, 320, 700)
+        Main.Size = UDim2.fromOffset(newX, newY)
+    end
+end)
 
 -- ====================== DRAGGING ======================
 
@@ -409,10 +442,9 @@ MinimizeBtn.MouseButton1Click:Connect(function()
     State.IsMinimized = not State.IsMinimized
 
     if State.IsMinimized then
-        Main.Size = UDim2.fromOffset(360, 42)
+        Main.Size = UDim2.fromOffset(Main.Size.X.Offset, 32)
         MinimizeBtn.Text = "+"
-        Title.Text = "🎣 Auto Farm (Minimized)  •  Mugi fucker"
-
+        Title.Text = "🎣 Auto Farm (Minimized)"
         for _, child in ipairs(Main:GetChildren()) do
             if child ~= TopBar and not child:IsA("UICorner") and not child:IsA("UIStroke") then
                 child.Visible = false
@@ -421,8 +453,7 @@ MinimizeBtn.MouseButton1Click:Connect(function()
     else
         Main.Size = originalSize
         MinimizeBtn.Text = "−"
-        Title.Text = "🎣 Auto Farm  •  Made by Mugi fucker"
-
+        Title.Text = "🎣 Auto Farm • Mugi"
         for _, child in ipairs(Main:GetChildren()) do
             if child ~= TopBar and not child:IsA("UICorner") and not child:IsA("UIStroke") then
                 child.Visible = true
@@ -705,7 +736,24 @@ FishToggle.MouseButton1Click:Connect(function()
     end
 end)
 
+-- ====================== AUTO START ======================
+task.delay(0.8, function()
+    if not State.IsRunning then
+        State.IsRunning = true
+        State.FishCaught = 0
+        State.IsCharging = false
+        State.StartTime = os.clock()
+        State.ElapsedTime = 0
+        FishToggle.Text = "STOP FISHING"
+        FishToggle.BackgroundColor3 = Color3.fromRGB(231, 76, 60)
+        State.Status = "Running..."
+        updateUI()
+        updateTimer()
+        task.spawn(fishMainLoop)
+    end
+end)
+
 -- Init
 updateUI()
 TimerLabel.Text = "Time: 00:00"
-print("[Mugi Auto Farm] Fish Killer + Chest Hunter (message only) loaded")
+print("[Mugi Auto Farm] Compact + Auto Start + Resizable loaded")
